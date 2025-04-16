@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base href="" />
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title></title>
+    <meta name='viewport' content='width=device-width, initial-scale=1, initial-scale=1, user-scalable=no'>
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+    <!-- jQuery 3.6.1 -->
+    <script src="./bower_components/jquery-3.6.1/jquery-3.6.1.min.js"></script>
+    <!-- slick 1.8.1 -->
+    <link rel="stylesheet" type="text/css" href="./bower_components/slick-1.8.1/slick/slick.css">
+    <script src="./bower_components/slick-1.8.1/slick/slick.min.js"></script>
+    <!-- Bootstrap-select 1.13.18 -->
+    <link rel="stylesheet" type="text/css"
+        href="./bower_components/bootstrap-select-1.13.18/css/bootstrap-select.min.css">
+    <script src="./bower_components/bootstrap-select-1.13.18/js/bootstrap-select.min.js"></script>
+    <script src="https://unpkg.com/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"
+        data-src="https://unpkg.com/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Custom -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css?v=20231124_2">
+
+    <link rel="icon" href="img/logo.png?v=20241220_2">
+    <link rel="apple-touch-icon" href="img/logo.png?v=20241220_2">
+    <meta name="title" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content=" White paper" />
+    <meta property="og:title" content="BEDR wallet">
+    <meta property="og:description" content="BEDR wallet Home">
+    <meta property="og:url" content="https://BEDRwallet.io/">
+    <meta property="og:image" content="img/BEDR_logo.png?v=20241220_2">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <header>
+        <div class="menu col-8 m-auto">
+            <div class="logo-icon">
+                <img class="logo" src="img/Icon.svg" class="" alt="icon">
+                <!-- <font class="logo-font"> COIN</font> -->
+            </div>
+            <div>
+                <select class="language" onchange="changeLang()">
+                    <option data-thumbnail="img/language_English.png' width=40 height=25" value="en">ENG</option>
+                    <option data-thumbnail="img/language_Korean.png' width=40" value="ko">KOR</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <div class="main_container">
+        <section class="middle-01 row justify-content-center">
+            <div class="contents col-12 mx-auto">
+                <div class="intro">
+                    <img src="img/middle01_logo.svg" class="img" alt="logo">
+                    <span class="middle_01_span_01">The BEDR Fondation builds a decentraized-based virtual asset ecosystem</span>
+                    <span class="middle_01_span_02">We keep the corporate spirit of working together and sharing together.</span>
+                </div>
+                <div class="down">
+                    <button onclick="move('aos')"><img src="./img/down_aos.png" alt="walletDown_aos"></button>
+                    <button onclick="move('ios')"><img src="./img/down_ios.png" alt="walletDown_ios"></button>
+                </div>
+
+            </div>
+        </section>
+        <section class="middle-02 row justify-content-center">
+            <div class="contents col-12 mx-auto">
+                <div class="product">
+                    <img src="./img/middle02_sc_01.svg" alt="product_screenshot_01">
+                    <img src="./img/middle02_sc_02.svg" alt="product_screenshot_02">
+                    <img src="./img/middle02_sc_03.svg" alt="product_screenshot_03">
+                    <img src="./img/middle02_sc_04.svg" alt="product_screenshot_04">
+                </div>
+                <div class="point">
+                    <ul>
+                        <li class="middle_02_li_01">Security-enhanced payment system</li>
+                        <li class="middle_02_li_02">Various swap handling</li>
+                        <li class="middle_02_li_03">Fast deposit and withdrawal processing</li>
+                        <li class="middle_02_li_04">Coin information provided</li>
+                    </ul>
+                </div>
+                <div class="text">
+                    <p>This site is exclusively for BEDR wallet</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="contents col-12">
+            <div class="box">
+                <span class="contact">Contact Us</span>
+                <a href="mailto:human0037@naver.com"><p>human0037@naver.com</p></a>
+                <a href="tel:+82-43-653-5532"><p>+82-43-653-5532</p></a>
+            </div>
+            <div class="bar"></div>
+            <div class="box">
+                <span class="copyright">All rights reserved by BEDR Foundation LLC.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/main.js?v=20241220_2"></script>
+
+</html>
