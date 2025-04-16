@@ -1,0 +1,447 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* 한글 폰트 */
+
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("@/assets/fonts/NotoSansKR-Light.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  /* 영문,숫자 폰트 별도 사용시 -> unicode-range: U+AC00-D7A3; */
+  unicode-range: U+AC00-D7A3;
+  /* unicode-range: U+AC00-D7A3, U+0020-007E; */
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("@/assets/fonts/NotoSansKR-Regular.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("@/assets/fonts/NotoSansKR-Medium.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("@/assets/fonts/NotoSansKR-Bold.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("@/assets/fonts/NotoSansKR-Black.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  unicode-range: U+AC00-D7A3;
+}
+
+
+/* 영문, 숫자 폰트 */
+
+@font-face {
+  font-family: "Poppins";
+  src: url("@/assets/fonts/Poppins-Light.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  /* unicode-range: U+0041-005A, U+0061-007A, U+0030-0039; */
+  unicode-range: U+0020-007E; 
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("@/assets/fonts/Poppins-Regular.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0020-007E; 
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("@/assets/fonts/Poppins-Medium.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  unicode-range: U+0020-007E; 
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("@/assets/fonts/Poppins-SemiBold.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  unicode-range: U+0020-007E; 
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("@/assets/fonts/Poppins-Bold.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  unicode-range: U+0020-007E; 
+}
+
+@font-face {
+  font-family: "NotoSansKR_ALL";
+  src: url("@/assets/fonts/NotoSansKR-Regular.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* 크메르어 폰트 */
+
+@font-face {
+  font-family: "Hanuman";
+  src: url("@/assets/fonts/Hanuman-Light.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hanuman";
+  src: url("@/assets/fonts/Hanuman-Regular.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hanuman";
+  src: url("@/assets/fonts/Hanuman-Regular.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hanuman";
+  src: url("@/assets/fonts/Hanuman-Bold.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hanuman";
+  src: url("@/assets/fonts/Hanuman-Black.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+.height_full {
+	height: 100vh;
+  height: 100dvh;
+}
+
+.height_ios {
+	height: 100vh;
+	/* height: -webkit-fill-available; */
+}
+
+body {
+  /* 영문,숫자 폰트 별도 사용시 -> font-family: 'Poppins', 'NotoSansKR'; */
+  font-family: 'Poppins', 'NotoSansKR', 'Hanuman';
+  font-weight: 500;
+  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+
+  /* margin-top: constant(safe-area-inset-top); */
+  /* margin-bottom: constant(safe-area-inset-bottom); */
+  /* margin-left: constant(safe-area-inset-left); */
+  /* margin-right: constant(safe-area-inset-right); */
+
+  /* margin-top: env(safe-area-inset-top); */
+  /* margin-bottom: env(safe-area-inset-bottom); */
+  /* margin-left: env(safe-area-inset-left); */
+  /* margin-right: env(safe-area-inset-right); */
+
+  /* padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left) !important; */
+}
+
+pre {
+  /* font-family: 'NotoSansKR'; */
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+*:focus {
+  @apply border-transparent focus:border-transparent focus:ring-0;
+}
+
+input {
+  border: 1px solid #D1DDEF !important;
+  border-radius: 20px !important;
+  background: #EBF0F5 !important;
+  font-weight: 400;
+}
+
+.g-input-gray {
+  background: #E7EDF3 !important;
+}
+
+.g-input-white {
+  background: #FFFFFF !important;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+  border-right: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
+}
+
+input::placeholder {
+  color: #9C9C9C !important;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+select {
+  border: 1px solid #D1DDEF !important;
+  border-radius: 20px !important;
+  background-color: #FFFFFF !important;
+  background-image: url('@/assets/images/select_arrow.svg') !important;
+  background-size: 20px !important;
+  background-position: right 20px center !important;
+}
+
+.g-select-gray {
+  background-color: #E7EDF3 !important;
+}
+
+select:focus {
+  outline: none;
+  border: none;
+  border-right: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
+}
+
+textarea {
+  /* color: #DFBD94 !important; */
+  border: 1px solid transparent !important;
+  border-radius: 16px !important;
+  background: #FFFFFF !important;
+  resize: none;
+}
+
+textarea::placeholder {
+  text-align: center;
+  line-height: 6rem;
+  vertical-align: middle;
+  color: #919191;
+  font-size: 14px;
+}
+
+textarea:focus {
+  outline: none;
+  border: none;
+  border-right: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
+}
+
+
+::-webkit-scrollbar {
+  width: 0px;  /* 세로축 스크롤바 폭 너비 */
+  height: 0px;  /* 가로축 스크롤바 폭 너비 */
+}
+
+/*
+::-webkit-scrollbar-thumb {
+  background: #e89a3e; // 스크롤바 막대 색상
+  border: 2px solid #9b6a2f; // 스크롤바 막대 테두리 설정 
+  border: 2px solid transparent; // 스크롤바 막대 투명
+  border-radius: 12px 12px 12px 12px;
+}
+*/
+
+.g-input-no-border {
+	border: none !important;
+	box-shadow: 0px !important;
+	background: transparent !important;
+}
+
+.g-footer {
+  /* border-radius: 37px; */
+  background: #F5F5F5;
+  border-top: 1px solid #DDDDDD;
+}
+
+.g-main-bg1 {
+	background: #0D2345;
+}
+
+.g-main-bg2 {
+	background: #FFFFFF;
+}
+
+.g-btn-color {
+  border-radius: 30px;
+  background: #0B0F27;
+  color: #FFFFFF;
+  box-shadow: 0px 6px 4px rgba(90, 114, 238, 0.25);
+}
+
+.g-btn-none {
+  border-radius: 30px;
+  background: #FFFFFF;
+  border: 1px solid #D1DDEF;
+  color: #0B6BF3;
+  box-shadow: 0px 4px 4px rgba(106, 154, 189, 0.25);
+}
+
+.g-btn-color2 {
+  border-radius: 30px;
+  background: #EED441;
+  color: #0B0F27;
+  box-shadow: 0px 4px 4px rgba(106, 154, 189, 0.25);
+}
+
+.g-btn-gray {
+  border-radius: 30px;
+  background: #5E5E5E;
+  color: #FFFFFF;
+}
+
+.g-btn-light-gray {
+  border-radius: 30px;
+  background: linear-gradient(180deg, #BABABA 0%, #757575 100%);
+  color: #3D3D3D;
+}
+
+
+.g-btn-color-s {
+  border-radius: 21px;
+  background: #0B0F27;
+  color: #FFFFFF;
+  box-shadow: 0px 6px 4px rgba(90, 114, 238, 0.25);
+}
+
+.g-btn-none-s {
+  border-radius: 21px;
+  background: #00000033;
+  color: #000000;
+  box-shadow: 0px 4px 4px rgba(106, 154, 189, 0.25);
+}
+
+.g-btn-color-m {
+  border-radius: 40px;
+  background: #EED441;
+  color: #0B0F27;
+}
+
+.g-btn-none-m {
+  border-radius: 40px;
+  background: #E7EDF3;
+  border: 0px solid #000;
+  color: #0B0F27;
+}
+
+.g-btn-gray-m {
+  border-radius: 40px;
+  background: #8693A4;
+  color: #FFFFFF;
+}
+
+.g-login-box {
+	border-radius: 30px 30px 0 0;
+	background: #EBF0F5;
+}
+
+.g-input-box {
+	border-radius: 6px;
+	background: #E7EDF3;
+}
+
+.g-line {
+  background-color: #9EAC9E;
+}
+
+.g-wallet-border {
+	background: #ffffff;
+	border: 1px solid #9AA19C;
+	border-radius: 50%;
+	width: 46px;
+	height: 46px;
+}
+
+.g-wallet-icon {
+	width: 44px;
+	height: 44px;
+	flex-shrink: 0;
+}
+
+.g-red {
+  color: #F93968;
+}
+
+.g-blue {
+  color: #2170EA;
+}
+
+.g-dark-blue {
+  color: #2854EB;
+}
+
+.g-color {
+  color: #0B6BF3;
+}
+
+.g-gray {
+  color: #959595;
+}
+
+.g-dark-gray {
+  color: #868686;
+}
+
+.g-particle {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: #ff0000;
+	border-radius: 50%;
+}
+
+.g-main-box {
+  border-radius: 30px 30px 0px 0px;
+  background-color: #EBF0F5; 
+}
+
+.g-list-box {
+	border-radius: 38px;
+	background: #ebf0f5;
+	border: 1px solid #d1ddef;
+}
