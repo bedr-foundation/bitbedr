@@ -1,0 +1,62 @@
+{
+  "_from": "cordova-plugin-safearea",
+  "_id": "cordova-plugin-safearea@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-ljpaDzMLOT6r7jGXk05ShAXqqRvSEcQ7lDa1pl/uXPxfTDbxSrL8WpD/gClQEDMJlJaICxwNDKTQnI2z/nV5rQ==",
+  "_location": "/cordova-plugin-safearea",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-safearea",
+    "name": "cordova-plugin-safearea",
+    "escapedName": "cordova-plugin-safearea",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-safearea/-/cordova-plugin-safearea-1.0.0.tgz",
+  "_shasum": "543d51d748acc6a86c2f402c353c58cb677cb417",
+  "_spec": "cordova-plugin-safearea",
+  "_where": "/Users/rnplab/workspace/WEXWallet/front/src-cordova",
+  "author": {
+    "name": "Henrique Moreira"
+  },
+  "bugs": {
+    "url": "https://github.com/rickgbw/cordova-plugin-safearea/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-safearea",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "A cordova plugin to get the size of the iPhone X safe area",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/rickgbw/cordova-plugin-safearea#readme",
+  "keywords": [
+    "cordova",
+    "iphone x",
+    "safe area",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-safearea",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickgbw/cordova-plugin-safearea.git"
+  },
+  "version": "1.0.0"
+}

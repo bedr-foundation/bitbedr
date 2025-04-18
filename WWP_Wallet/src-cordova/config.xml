@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="app.wwf.wallet" version="1.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>WWP Wallet</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    <!-- this hook will point your config.xml to the DevServer on Serve -->
+    <hook type="after_prepare" src="../node_modules/vue-cli-plugin-cordova/serve-config-hook.js" />
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <preference name="SplashScreen" value="none"/>
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="0" />
+    <platform name="android">
+        <preference name="android-targetSdkVersion" value="34" />
+    </platform>    
+    <platform name="ios">
+        <!-- <resource-file src="GoogleService-Info.plist" />
+        <plugin name="@globules-io/cordova-plugin-ios-xhr" /> -->
+        <preference name="InterceptRemoteRequests" value="all" />
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="SwiftVersion" value="5.0" />
+        <preference name="WKWebViewOnly" value="true" />
+        <feature name="CDVWKWebViewEngine">
+            <param name="ios-package" value="CDVWKWebViewEngine" />
+        </feature>
+        <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+        <!-- <preference name="InspectableWebview" value="true" /> -->
+    </platform>
+    <preference name="Orientation" value="portrait" />
+</widget>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="app.wwf.wallet" version="1.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="CDVWebViewEngine">
+        <param name="ios-package" value="CDVWebViewEngine" />
+    </feature>
+    <feature name="LaunchScreen">
+        <param name="ios-package" value="CDVLaunchScreen" />
+    </feature>
+    <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="HandleOpenUrl">
+        <param name="ios-package" value="CDVHandleOpenURL" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="IntentAndNavigationFilter">
+        <param name="ios-package" value="CDVIntentAndNavigationFilter" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="GestureHandler">
+        <param name="ios-package" value="CDVGestureHandler" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Clipboard">
+        <param name="ios-package" value="CDVClipboard" />
+    </feature>
+    <feature name="AppVersion">
+        <param name="ios-package" value="AppVersion" />
+    </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="Fingerprint">
+        <param name="ios-package" value="Fingerprint" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVWKInAppBrowser" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="QRScanner">
+        <param name="ios-package" value="QRScanner" />
+    </feature>
+    <feature name="SafeArea">
+        <param name="ios-package" value="SafeArea" />
+    </feature>
+    <feature name="CDVOrientation">
+        <param name="ios-package" value="CDVOrientation" />
+    </feature>
+    <feature name="Toast">
+        <param name="ios-package" value="Toast" />
+    </feature>
+    <feature name="Keyboard">
+        <param name="ios-package" onload="true" value="IonicKeyboard" />
+    </feature>
+    <feature name="OneSignalPush">
+        <param name="ios-package" value="OneSignalPush" />
+    </feature>
+    <name>WWP Wallet</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    <hook src="../node_modules/vue-cli-plugin-cordova/serve-config-hook.js" type="after_prepare" />
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+    <preference name="AllowInlineMediaPlayback" value="false" />
+    <preference name="BackupWebStorage" value="cloud" />
+    <preference name="DisallowOverscroll" value="false" />
+    <preference name="EnableViewportScale" value="false" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="true" />
+    <preference name="MediaTypesRequiringUserActionForPlayback" value="none" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="SuppressesLongPressGesture" value="false" />
+    <preference name="Suppresses3DTouchGesture" value="false" />
+    <preference name="GapBetweenPages" value="0" />
+    <preference name="PageLength" value="0" />
+    <preference name="PaginationBreakingMode" value="page" />
+    <preference name="PaginationMode" value="unpaginated" />
+    <preference name="SplashScreen" value="none" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="0" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="InterceptRemoteRequests" value="all" />
+    <preference name="SwiftVersion" value="5.0" />
+    <preference name="WKWebViewOnly" value="true" />
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+</widget>

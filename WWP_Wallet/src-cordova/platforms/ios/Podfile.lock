@@ -1,0 +1,69 @@
+PODS:
+  - Base64 (1.1.2)
+  - JWT (2.2.0):
+    - Base64 (~> 1.1.2)
+  - OneSignalXCFramework (5.2.0):
+    - OneSignalXCFramework/OneSignalComplete (= 5.2.0)
+  - OneSignalXCFramework/OneSignal (5.2.0):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalExtension
+    - OneSignalXCFramework/OneSignalLiveActivities
+    - OneSignalXCFramework/OneSignalNotifications
+    - OneSignalXCFramework/OneSignalOSCore
+    - OneSignalXCFramework/OneSignalOutcomes
+    - OneSignalXCFramework/OneSignalUser
+  - OneSignalXCFramework/OneSignalComplete (5.2.0):
+    - OneSignalXCFramework/OneSignal
+    - OneSignalXCFramework/OneSignalInAppMessages
+    - OneSignalXCFramework/OneSignalLocation
+  - OneSignalXCFramework/OneSignalCore (5.2.0)
+  - OneSignalXCFramework/OneSignalExtension (5.2.0):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalOutcomes
+  - OneSignalXCFramework/OneSignalInAppMessages (5.2.0):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalNotifications
+    - OneSignalXCFramework/OneSignalOSCore
+    - OneSignalXCFramework/OneSignalOutcomes
+    - OneSignalXCFramework/OneSignalUser
+  - OneSignalXCFramework/OneSignalLiveActivities (5.2.0):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalOSCore
+    - OneSignalXCFramework/OneSignalUser
+  - OneSignalXCFramework/OneSignalLocation (5.2.0):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalNotifications
+    - OneSignalXCFramework/OneSignalOSCore
+    - OneSignalXCFramework/OneSignalUser
+  - OneSignalXCFramework/OneSignalNotifications (5.2.0):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalExtension
+    - OneSignalXCFramework/OneSignalOutcomes
+  - OneSignalXCFramework/OneSignalOSCore (5.2.0):
+    - OneSignalXCFramework/OneSignalCore
+  - OneSignalXCFramework/OneSignalOutcomes (5.2.0):
+    - OneSignalXCFramework/OneSignalCore
+  - OneSignalXCFramework/OneSignalUser (5.2.0):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalNotifications
+    - OneSignalXCFramework/OneSignalOSCore
+    - OneSignalXCFramework/OneSignalOutcomes
+
+DEPENDENCIES:
+  - JWT
+  - OneSignalXCFramework (= 5.2.0)
+
+SPEC REPOS:
+  trunk:
+    - Base64
+    - JWT
+    - OneSignalXCFramework
+
+SPEC CHECKSUMS:
+  Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
+  JWT: cf73c0ab0dac762df3de8a3f1164352089d97780
+  OneSignalXCFramework: bdf74fdc06888f9466dc21e826fe1549ed143095
+
+PODFILE CHECKSUM: c3bcdb478ca64504f7232bfa0c6a4159e0a2539c
+
+COCOAPODS: 1.14.3

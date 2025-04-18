@@ -1,0 +1,56 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-clipboard-api": {
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    },
+    "cordova-plugin-fingerprint-aio": {
+      "FACEID_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    },
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    },
+    "cordova-plugin-safearea": {
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    },
+    "cordova-plugin-x-toast": {
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    },
+    "cordova-support-android-plugin": {
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "app.bedr.wallet2"
+    }
+  }
+}
