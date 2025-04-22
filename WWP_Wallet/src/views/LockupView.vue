@@ -49,6 +49,15 @@
 						<div>{{ $t('word.unLockPercent') }}</div>
 						<div class="grow text-right g-blue">{{ token.unlockRatePer }} %</div>
 					</div>
+					<template v-if="token.secondUnlockCount > 0">
+						<div class="h-2"></div>
+						<div class="px-4 flex">
+							<div>{{ $t('word.addUnlock') }}</div>
+							<div class="grow text-right g-blue">
+								{{ token.secondUnlockCount }} {{ $t('word.count') }} / {{ token.secondUnlockRate }} %
+							</div>
+						</div>
+					</template>
 					<div class="h-3"></div>
 					<div class="px-5 py-3 lockup-in-box">
 						<div class="flex">

@@ -14,7 +14,9 @@
 				<div class="px-8 flex justify-center items-center">
 					<div class="text-sm">{{ $t('word.evaluationAmount') }} ({{ store.state.currency }})</div>
 					<div class="grow text-right">
-						{{ setDecimals(balance * detailInfo.price * exchangeInfos[store.state.currency].price, detailInfo.priceDecimals) }}
+						{{
+							setDecimals((balance + lockUpCount) * detailInfo.price * exchangeInfos[store.state.currency].price, detailInfo.priceDecimals)
+						}}
 					</div>
 				</div>
 				<div class="h-3"></div>
@@ -22,6 +24,13 @@
 					<div class="text-sm">{{ $t('word.ownQuantity') }}</div>
 					<div class="grow text-xl text-right">{{ setDecimals(balance, detailInfo.decimals) }}</div>
 				</div>
+				<template v-if="isblockUser == false && lockupCheck == true">
+					<div class="h-3"></div>
+					<div class="px-8 flex justify-center items-center">
+						<div class="text-sm">{{ $t('word.lockUpCount') }}</div>
+						<div class="grow text-xl text-right">{{ setDecimals(lockUpCount, detailInfo.decimals) }}</div>
+					</div>
+				</template>
 				<div class="h-3"></div>
 				<div class="w-full text-black font-medium top2">
 					<div class="h-5"></div>
@@ -317,6 +326,8 @@ const swapList = store.getters['getSwapList'];
 const balance = myData[mySymbol];
 const myAddress = ref();
 
+const lockUpCount = ref(0);
+
 const exchangeInfos = store.getters['getExchangeInfos'];
 const exchangeList = ref([]);
 
@@ -460,6 +471,12 @@ const checkLockup = () => {
 	for (let key in myToken) {
 		if (myToken[key].symbol == mySymbol) {
 			lockupCheck.value = true;
+
+			let tokenList = myToken[key].list;
+
+			for (let subKey in tokenList) {
+				lockUpCount.value += Number(tokenList[subKey].totalQty - tokenList[subKey].totalWithdrawQty);
+			}
 
 			break;
 		}

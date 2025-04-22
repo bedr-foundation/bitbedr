@@ -66,15 +66,20 @@
 								</div>
 								<div class="grow"></div>
 								<div class="ml-2 mt-px flex flex-col items-end text-lg">
-									<div v-if="myData[token.symbol] != undefined">
-										{{ setDecimals(myData[token.symbol], token.decimals) }}
+									<div v-if="myData[token.symbol] != undefined && !isEmpty(lockUpCountList[token.symbol])">
+										{{ setDecimals(parseFloat(myData[token.symbol]) + lockUpCountList[token.symbol], token.decimals) }}
 									</div>
 									<div v-else>0</div>
-									<div v-if="myData[token.symbol] != undefined" class="text-xs g-dark-gray">
+									<div v-if="myData[token.symbol] != undefined && !isEmpty(lockUpCountList[token.symbol])" class="text-xs g-dark-gray">
 										{{ store.state.currency }}
 										<template v-for="exchange in showExchangeInfos" :key="exchange.currency">
 											<template v-if="exchange.currency == store.state.currency">
-												{{ setDecimals(myData[token.symbol] * token.price * exchange.price, token.priceDecimals) }}
+												{{
+													setDecimals(
+														(parseFloat(myData[token.symbol]) + lockUpCountList[token.symbol]) * token.price * exchange.price,
+														token.priceDecimals
+													)
+												}}
 											</template>
 										</template>
 									</div>
@@ -162,6 +167,8 @@ const powerBall = ref(0);
 const powerBallDelay = ref(100);
 
 const mCard = ref(null);
+
+const lockUpCountList = reactive([]);
 
 let child = null;
 let childTimer = null;
@@ -340,6 +347,8 @@ const getTokenInfos = () => {
 			resData.tokenInfos.forEach(res => {
 				tokenInfos[res.symbol] = res;
 
+				lockUpCountList[res.symbol] = 0;
+
 				if (res.type == 'P') {
 					pointSymbol.value = res.symbol;
 				}
@@ -407,13 +416,13 @@ const getBalanceAll = async () => {
 					const balanceOf = await network.getBalanceSmartContract(contract, address);
 					const balanceTRC20Wei = new BigNumber(balanceOf.toString());
 					const balanceTRC20 = tronFromWei(balanceTRC20Wei.toString(), decimals);
-					// console.log('balance TRC20:', balanceTRC20.toString());
+					//console.log(token.symbol + ' balance token :', balanceTRC20.toString());
 					myData[token.symbol] = balanceTRC20.toString();
 				} else if (token.type == '') {
 					const balanceOf = await network.getBalance(address);
 					const balanceWei = new BigNumber(balanceOf.toString());
 					const balanceTron = tronFromWei(balanceWei.toString());
-					// console.log('balance TRX:', balanceTron.toString());
+					//console.log(token.symbol + ' balance :', balanceTron.toString());
 					myData[token.symbol] = balanceTron.toString();
 				}
 			} else {
@@ -424,14 +433,14 @@ const getBalanceAll = async () => {
 					const balance = await network.getBalanceSmartContract(contract, address);
 					const balanceBig = new BigNumber(balance);
 					const balanceOf = balanceBig.dividedBy(10 ** decimals);
-					console.log('balance Token:', balanceOf.toString());
+					//console.log(token.symbol + ' balance Token :', balanceOf.toString());
 					myData[token.symbol] = balanceOf.toString();
 				} else if (token.type == '') {
 					const decimals = 18; // eth 네트워크는 자리수가 18자리
 					const balance = await network.getBalance(address);
 					const balanceBig = new BigNumber(balance);
 					const balanceOf = balanceBig.dividedBy(10 ** decimals);
-					console.log('balance :', balanceOf.toString());
+					//console.log(token.symbol + ' balance :', balanceOf.toString());
 					myData[token.symbol] = balanceOf.toString();
 				}
 			}
@@ -490,9 +499,11 @@ const updatePrice = () => {
 	totalPrice.value = 0;
 
 	for (let key in tokenInfos) {
+		lockUpCountList[key] = 0;
+
 		if (isEmpty(myData[key])) continue;
 
-		totalPrice.value += myData[key] * tokenInfos[key].price;
+		totalPrice.value += parseFloat(myData[key]) * tokenInfos[key].price;
 
 		if (tokenInfos[key].type == 'P') {
 			bedrPoint.value = myData[key];
@@ -501,7 +512,6 @@ const updatePrice = () => {
 		}
 	}
 
-	/* Lockup 제외
 	let myToken = myData.mytoken;
 
 	for (let key in myToken) {
@@ -509,14 +519,16 @@ const updatePrice = () => {
 		let tokenList = myToken[key].list;
 
 		for (let subKey in tokenList) {
-			console.log(tokenList[subKey]);
 			totalPrice.value +=
 				Number(tokenList[subKey].totalQty - tokenList[subKey].totalWithdrawQty) *
 				tokenInfos[tokenSymbol].price *
 				exchangeInfos.value[store.state.currency].price;
+
+			lockUpCountList[tokenSymbol] += Number(tokenList[subKey].totalQty - tokenList[subKey].totalWithdrawQty);
 		}
 	}
-	*/
+
+	console.log(lockUpCountList);
 
 	store.state.isLoading = false;
 };
