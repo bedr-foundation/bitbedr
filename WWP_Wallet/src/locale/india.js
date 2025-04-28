@@ -173,7 +173,10 @@ export default {
 		otpGuide: 'ओटीपी स्थापना गाइड',
 		otpEnterCode: 'ओटीपी कोड दर्ज करें',
 		register: 'रजिस्टर करें',
-		remove: 'हटाएँ'
+		remove: 'हटाएँ',
+		lockUpCount: 'लॉकअप मात्रा',
+		addUnlock: 'अतिरिक्त अनलॉक',
+		count: 'गिनती करना'
 	},
 
 	message: {

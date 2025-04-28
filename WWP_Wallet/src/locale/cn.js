@@ -169,7 +169,10 @@ export default {
 		emailAuthVerify: '檢查認證號碼',
 		otpSettingsKey: '设置键',
 		otpGuide: 'OTP 安装指南',
-		otpEnterCode: '输入 OTP 代码'
+		otpEnterCode: '输入 OTP 代码',
+		lockUpCount: '锁仓数量',
+		addUnlock: '额外解锁',
+		count: '数数'
 	},
 
 	message: {

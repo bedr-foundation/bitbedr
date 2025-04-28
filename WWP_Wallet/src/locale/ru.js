@@ -173,7 +173,10 @@ export default {
 		otpGuide: 'Руководство по установке OTP',
 		otpEnterCode: 'Введите одноразовый пароль',
 		register: 'Зарегистрироваться',
-		remove: 'Удалить'
+		remove: 'Удалить',
+		lockUpCount: 'Количество блокировок',
+		addUnlock: 'Дополнительная разблокировка',
+		count: 'Считать'
 	},
 
 	message: {

@@ -173,7 +173,10 @@ export default {
 		otpGuide: 'Panduan Instalasi OTP',
 		otpEnterCode: 'Masukkan kode OTP',
 		register: 'Daftar',
-		remove: 'Hapus'
+		remove: 'Hapus',
+		lockUpCount: 'Kuantitas Penguncian',
+		addUnlock: 'Pembukaan Tambahan',
+		count: 'Menghitung'
 	},
 
 	message: {

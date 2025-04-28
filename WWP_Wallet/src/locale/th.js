@@ -173,7 +173,10 @@ export default {
 		otpGuide: 'มือการติดตั้ง OTP',
 		otpEnterCode: 'กรอกรหัส OTP',
 		register: 'ลงทะเบียน',
-		remove: 'ลบ'
+		remove: 'ลบ',
+		lockUpCount: 'จำนวนการล็อค',
+		addUnlock: 'การปลดล็อคเพิ่มเติม',
+		count: 'นับ'
 	},
 
 	message: {

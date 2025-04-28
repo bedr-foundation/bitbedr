@@ -163,7 +163,7 @@
 
 body {
   /* 영문,숫자 폰트 별도 사용시 -> font-family: 'Poppins', 'NotoSansKR'; */
-  font-family: 'Poppins', 'NotoSansKR', 'Hanuman';
+  font-family: 'Poppins', 'NotoSansKR', 'Hanuman', -apple-system;
   font-weight: 500;
   -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
   -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */

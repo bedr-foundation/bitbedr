@@ -173,7 +173,10 @@ export default {
 		otpGuide: 'OTP Installation Guide',
 		otpEnterCode: 'Enter OTP code',
 		register: 'Register',
-		remove: 'Delete'
+		remove: 'Delete',
+		lockUpCount: 'Lockup Quantity',
+		addUnlock: 'Additional Unlock',
+		count: 'Count'
 	},
 
 	message: {

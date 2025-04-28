@@ -173,7 +173,10 @@ export default {
 		otpGuide: 'Hướng dẫn cài đặt OTP',
 		otpEnterCode: 'Nhập mã OTP',
 		register: 'Đăng ký',
-		remove: 'Xóa'
+		remove: 'Xóa',
+		lockUpCount: 'Số lượng khóa',
+		addUnlock: 'Mở khóa bổ sung',
+		count: 'Đếm'
 	},
 
 	message: {

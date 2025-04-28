@@ -173,7 +173,10 @@ export default {
 		otpGuide: 'OTP Kurulum Kılavuzu',
 		otpEnterCode: 'OTP kodunu girin',
 		register: 'Kayıt Ol',
-		remove: 'Sil'
+		remove: 'Sil',
+		lockUpCount: 'Kilitleme Miktarı',
+		addUnlock: 'Ek Kilit Açma',
+		count: 'Saymak'
 	},
 
 	message: {

@@ -171,7 +171,10 @@ export default {
 		otpGuide: 'OTP 安裝指南',
 		otpEnterCode: '輸入 OTP 代碼',
 		register: '登記',
-		remove: '刪除'
+		remove: '刪除',
+		lockUpCount: '鎖倉數量',
+		addUnlock: '額外解鎖',
+		count: '數數'
 	},
 
 	message: {

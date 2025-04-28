@@ -173,7 +173,10 @@ export default {
 		otpGuide: 'OTP 설치 가이드',
 		otpEnterCode: 'OTP 코드 입력',
 		register: '발급',
-		remove: '삭제'
+		remove: '삭제',
+		lockUpCount: '락업수량',
+		addUnlock: '추가언락',
+		count: '회'
 	},
 
 	message: {
